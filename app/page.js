@@ -1,103 +1,165 @@
 import Image from "next/image";
+import { MapPin } from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div>
+      {/* Hero Section */}
+      <div className="w-full relative">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/hero.jpg"
+          alt="Pure Life Massage"
+          width={7257} // 设置实际图片宽度
+          height={1947} // 设置实际图片高度
           priority
+          quality={80}
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Services Section */}
+      <section className="py-12 mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-lg"
+            >
+              <div className="relative aspect-square">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 bg-background">
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* Price List Section */}
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-8">Price List</h2>
+
+        {/* 这里用 aspect-w-16 aspect-h-9 来保持 16:9 比例；图片会完整显示 */}
+        <div className="w-full ">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/price_list.jpg"
+            alt="Price List"
+            width={1920}
+            height={1080}
+            quality={75}
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/price_deco.png"
+            alt="Price Features"
+            width={1920}
+            height={1080}
+            quality={75}
+            priority
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/hicaps.jpg"
+            alt="participating with hicaps"
+            width={1920}
+            height={1080}
+            quality={75}
+            priority
           />
-          Go to nextjs.org →
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-12 ">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">About Pure Life Massage</h2>
+          <p className="text-lg text-foreground leading-relaxed whitespace-pre-line">
+            Pure Life Massage is a high-end massage shop offering a serene
+            experience for mind and body rejuvenation.
+            <br />
+            Specializing in remedial massage, hot stone massage, and reflexology
+            foot massages.
+            <br />
+            We are committed to providing our clients with an oasis of pleasure
+            and relaxation, rooted in our philosophy of enjoying a pure and
+            pleasurable lifestyle.
+            <br />
+            Established in 2020, Pure Life Massage has served over 5,000 guests
+            and is currently located at Level 1, Westfield Warringah Mall.
+            <br />
+            With years of professional expertise and a clean, elegant new store
+            environment, we have become the leading massage parlor in the
+            Brookvale area.
+            <br />
+            Choosing us ensures a healing and relaxing journey.
+          </p>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      {/* <section className="py-12 container mx-auto px-4">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold text-center">Visit Us</h2>
+          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+            <MapPin className="w-6 h-6 text-primary" />
+            <p className="text-center sm:text-left">
+              Level 1, Westfield Warringah Mall, Brookvale NSW 2100
+            </p>
+          </div>
+          <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!..."
+              width="100%"
+              height="100%"
+              loading="lazy"
+              className="border-0"
+            />
+          </div>
+        </div>
+      </section> */}
+
+      {/* Location Section */}
+      <div className="w-full relative">
+        <a href="https://www.google.com/maps/place/Pure+Life+Massage/@-33.7684942,151.2656739,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12ab6cebd577d1:0x2eb9b75a03d0bc85!8m2!3d-33.7684942!4d151.2656739!16s%2Fg%2F11vwqj1n1n?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D">
+          <Image
+            src="/location.jpg"
+            alt="Pure Life Massage"
+            width={7257} // 设置实际图片宽度
+            height={1947} // 设置实际图片高度
+            priority
+            quality={80}
+          />
         </a>
-      </footer>
+      </div>
     </div>
   );
 }
+
+// Service data
+const services = [
+  {
+    image: "/remedial.jpg",
+    title: "Remedial Massage",
+    description:
+      "Focused therapy to relieve pain, increase mobility, and repair injury.",
+  },
+  {
+    image: "/foot.jpg",
+    title: "Foot Massage (Reflexology)",
+    description:
+      "Pressure on foot points to improve health, promote relaxation and reduce stress.",
+  },
+  {
+    image: "/hotstone.jpg",
+    title: "Hot Stone Massage",
+    description:
+      "Heated stones to relax muscles, boost circulation, and ease pain.",
+  },
+];
