@@ -28,7 +28,7 @@ export default function VisitUsPage() {
         {/* 这里用 aspect-w-16 aspect-h-9 来保持 16:9 比例；图片会完整显示 */}
         <div className="w-full ">
           <Image
-            src="/visit_us.jpg"
+            src="/visit_us.png"
             alt="Visit Us Details"
             width={1920}
             height={1080}

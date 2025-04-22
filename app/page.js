@@ -58,16 +58,16 @@ export default function HomePage() {
             priority
           />
           <Image
-            src="/price_deco.png"
-            alt="Price Features"
+            src="/hicaps.png"
+            alt="participating with hicaps"
             width={1920}
             height={1080}
             quality={75}
             priority
           />
           <Image
-            src="/hicaps.jpg"
-            alt="participating with hicaps"
+            src="/price_deco.png"
+            alt="Price Features"
             width={1920}
             height={1080}
             quality={75}
@@ -129,7 +129,7 @@ export default function HomePage() {
       <div className="w-full relative">
         <a href="https://www.google.com/maps/place/Pure+Life+Massage/@-33.7684942,151.2656739,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12ab6cebd577d1:0x2eb9b75a03d0bc85!8m2!3d-33.7684942!4d151.2656739!16s%2Fg%2F11vwqj1n1n?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D">
           <Image
-            src="/location.jpg"
+            src="/location.png"
             alt="Pure Life Massage"
             width={7257} // 设置实际图片宽度
             height={1947} // 设置实际图片高度

@@ -35,19 +35,20 @@ export default function PriceListPage() {
             quality={75}
           />
           <Image
+            src="/hicaps.png"
+            alt="participating with hicaps"
+            width={1920}
+            height={1080}
+            quality={75}
+          />
+          <Image
             src="/price_deco.png"
             alt="price features"
             width={1920}
             height={1080}
             quality={75}
           />
-          <Image
-            src="/hicaps.jpg"
-            alt="participating with hicaps"
-            width={1920}
-            height={1080}
-            quality={75}
-          />
+          
         </div>
       </div>
     </div>
