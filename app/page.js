@@ -76,6 +76,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-8">Gift Voucher</h2>
+        <p className="text-lg text-center mb-4">
+          This gift card is valid for purchase and redeemed at Warringah Mall
+          store exclusively.
+        </p>
+        <div className="flex-1 space-y-4">
+          <Image
+            src="/gift-voucher-2.jpg"
+            alt="Remedial Massage"
+            width={1200}
+            height={500}
+            className="rounded-lg shadow-lg object-cover"
+          />
+          <Image
+            src="/gift-voucher-1.jpg"
+            alt="Remedial Massage"
+            width={1200}
+            height={500}
+            className="rounded-lg shadow-lg object-cover"
+          />
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-12 ">
         <div className="container mx-auto px-4 text-center">
