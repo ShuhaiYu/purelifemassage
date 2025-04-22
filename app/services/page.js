@@ -37,9 +37,7 @@ export default function ServicesPage() {
           <div className="flex-1 space-y-4">
             <div className="space-y-3">
               <p className="font-accord">
-                <span className="text-4xl text-primary">
-                  Remedial Massage
-                </span>{" "}
+                <span className="text-4xl text-primary">Remedial Massage</span>{" "}
                 is a targeted form of massage therapy that addresses specific
                 areas of pain, tension, or injury within the body. It is an
                 effective treatment for restoring function to injured muscle
@@ -174,6 +172,30 @@ export default function ServicesPage() {
                 body and mind.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col  gap-8 items-center">
+          <h2 className="text-3xl font-bold text-center mb-8">Gift Voucher</h2>
+          <p className="text-lg text-center mb-4">
+            This gift card is valid for purchase and redeemed at Warringah Mall
+            store exclusively.
+          </p>
+          <div className="flex-1 space-y-4">
+            <Image
+              src="/gift-voucher-2.jpg"
+              alt="Remedial Massage"
+              width={1200}
+              height={500}
+              className="rounded-lg shadow-lg object-cover"
+            />
+            <Image
+              src="/gift-voucher-1.jpg"
+              alt="Remedial Massage"
+              width={1200}
+              height={500}
+              className="rounded-lg shadow-lg object-cover"
+            />
           </div>
         </section>
       </div>

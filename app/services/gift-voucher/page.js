@@ -31,7 +31,8 @@ export default function GiftVoucherPage() {
         <section className="flex flex-col  gap-8 items-center">
           <h2 className="text-3xl font-bold text-center mb-8">Gift Voucher</h2>
           <p className="text-lg text-center mb-4">
-            Only valid for purchases at the Warringah Mall store.
+            This gift card is valid for purchase and redeemed at Warringah Mall
+            store exclusively.
           </p>
           <div className="flex-1 space-y-4">
             <Image
