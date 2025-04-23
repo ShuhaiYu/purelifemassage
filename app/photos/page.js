@@ -30,7 +30,7 @@ export default function PhotosPage() {
         {/* 图片展示区域 */}
         <div className="space-y-12">
           {[...Array(imageCount)].map((_, index) => (
-            <div 
+            <div
               key={index}
               className={`flex flex-col md:flex-row gap-12 ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -43,7 +43,17 @@ export default function PhotosPage() {
                   alt={`Main view ${index + 1}`}
                   width={1900}
                   height={1200}
-                  className="w-full h-96 object-cover rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105"
+                  className={`
+                    w-full
+                    h-auto           /* 手机：自适应高度，保持比例 */
+                    object-contain   /* 手机：完整显示，不裁剪 */
+                    rounded-lg
+                    shadow-xl
+                    transition-transform duration-300
+                    group-hover:scale-105
+                    md:h-96          /* ≥md：固定高度 */
+                    md:object-cover  /* ≥md：填充并裁剪 */
+                  `}
                   priority={index < 3} // 前3张优先加载
                 />
               </div>
@@ -55,7 +65,17 @@ export default function PhotosPage() {
                   alt={`Side view ${index + 1}`}
                   width={1200}
                   height={1900}
-                  className="w-full h-96 object-cover rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105"
+                  className={`
+                    w-full
+                    h-auto
+                    object-contain
+                    rounded-lg
+                    shadow-xl
+                    transition-transform duration-300
+                    group-hover:scale-105
+                    md:h-96
+                    md:object-cover
+                  `}
                 />
               </div>
             </div>

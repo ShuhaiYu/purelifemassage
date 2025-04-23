@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { MapPin } from "lucide-react";
-import Link from "next/link";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export default function HomePage() {
   return (
@@ -76,7 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12">
+      <section className="flex flex-col  gap-8 items-center">
         <h2 className="text-3xl font-bold text-center mb-8">Gift Voucher</h2>
         <p className="text-lg text-center mb-4">
           This gift card is valid for purchase and redeemed at Warringah Mall
@@ -101,10 +100,12 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 ">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">About Pure Life Massage</h2>
-          <p className="text-lg text-foreground leading-relaxed whitespace-pre-line">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-4xl font-extrabold mb-6">
+            About Pure Life Massage
+          </h2>
+          <p className="text-sm md:text-lg text-gray-700 leading-relaxed whitespace-pre-line mb-12">
             Pure Life Massage is a high-end massage shop offering a serene
             experience for mind and body rejuvenation.
             <br />
@@ -125,6 +126,8 @@ export default function HomePage() {
             Choosing us ensures a healing and relaxing journey.
           </p>
         </div>
+
+        <ImageCarousel />
       </section>
 
       {/* Location Section */}
