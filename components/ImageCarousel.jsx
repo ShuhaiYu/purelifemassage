@@ -37,6 +37,7 @@ export default function ImageCarousel() {
                 width={400}
                 height={300}
                 className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+                priority={i === 0}
               />
             </CarouselItem>
           ))}
