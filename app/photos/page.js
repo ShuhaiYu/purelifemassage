@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 
 export default function PhotosPage() {
-  const imageCount = 7; // 假设有7组图片
+  const imageCount = 6; // 6张图片
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
